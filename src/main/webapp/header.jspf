@@ -1,0 +1,10 @@
+<header>
+	<h1 align="center">
+		<a href="/myproj/main.jsp">포트폴리오</a>
+	</h1>
+	<h2 style="display:inline; padding: 20px;">
+		<a href="stockList.do">주식검색</a> &nbsp&nbsp
+		<a href="bankbook.do">파킹통장</a>
+	</h2>
+	<hr>
+</header>

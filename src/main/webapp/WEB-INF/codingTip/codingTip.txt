@@ -1,0 +1,10 @@
+SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+System.out.println(sdf.format(new java.util.Date()).getClass().getName()); // String
+String date = sdf.format(new java.util.Date());
+
+
+select to_char(sysdate,'yyyy-mm-dd hh24:mi:ss') from dual;
+
+// format 대소문자 구분 없음
+select to_date('20220403113006', 'YYYYMMDDHH24MISS') from dual;
+select to_date('20220403113006', 'yyyymmddhh24miss') from dual;
