@@ -3,22 +3,23 @@ package monthlyinterest.model;
 public class MonthlyInterest {
 	private String bankCode;
 	private String accountNumber;
-	private Long thisMonthInterest;
-	private Long oneMonthAgoInterest;
-	private Long twoMonthAgoInterest;
-	private Long threeMonthAgoInterest;
-	private Long fourMonthAgoInterest;
-	private Long fiveMonthAgoInterest;
-	private Long sixMonthAgoInterest;
-	private Long sevenMonthAgoInterest;
-	private Long eightMonthAgoInterest;
-	private Long nineMonthAgoInterest;
-	private Long tenMonthAgoInterest;
-	private Long elevenMonthAgoInterest;
-	public MonthlyInterest(String bankCode, String accountNumber, Long thisMonthInterest, Long oneMonthAgoInterest,
-			Long twoMonthAgoInterest, Long threeMonthAgoInterest, Long fourMonthAgoInterest, Long fiveMonthAgoInterest,
-			Long sixMonthAgoInterest, Long sevenMonthAgoInterest, Long eightMonthAgoInterest, Long nineMonthAgoInterest,
-			Long tenMonthAgoInterest, Long elevenMonthAgoInterest) {
+	private String thisMonthInterest;
+	private String oneMonthAgoInterest;
+	private String twoMonthAgoInterest;
+	private String threeMonthAgoInterest;
+	private String fourMonthAgoInterest;
+	private String fiveMonthAgoInterest;
+	private String sixMonthAgoInterest;
+	private String sevenMonthAgoInterest;
+	private String eightMonthAgoInterest;
+	private String nineMonthAgoInterest;
+	private String tenMonthAgoInterest;
+	private String elevenMonthAgoInterest;
+	public MonthlyInterest(String bankCode, String accountNumber, String thisMonthInterest,
+			String oneMonthAgoInterest, String twoMonthAgoInterest, String threeMonthAgoInterest,
+			String fourMonthAgoInterest, String fiveMonthAgoInterest, String sixMonthAgoInterest,
+			String sevenMonthAgoInterest, String eightMonthAgoInterest, String nineMonthAgoInterest,
+			String tenMonthAgoInterest, String elevenMonthAgoInterest) {
 		super();
 		this.bankCode = bankCode;
 		this.accountNumber = accountNumber;
@@ -47,76 +48,76 @@ public class MonthlyInterest {
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
-	public Long getThisMonthInterest() {
+	public String getThisMonthInterest() {
 		return thisMonthInterest;
 	}
-	public void setThisMonthInterest(Long thisMonthInterest) {
+	public void setThisMonthInterest(String thisMonthInterest) {
 		this.thisMonthInterest = thisMonthInterest;
 	}
-	public Long getOneMonthAgoInterest() {
+	public String getOneMonthAgoInterest() {
 		return oneMonthAgoInterest;
 	}
-	public void setOneMonthAgoInterest(Long oneMonthAgoInterest) {
+	public void setOneMonthAgoInterest(String oneMonthAgoInterest) {
 		this.oneMonthAgoInterest = oneMonthAgoInterest;
 	}
-	public Long getTwoMonthAgoInterest() {
+	public String getTwoMonthAgoInterest() {
 		return twoMonthAgoInterest;
 	}
-	public void setTwoMonthAgoInterest(Long twoMonthAgoInterest) {
+	public void setTwoMonthAgoInterest(String twoMonthAgoInterest) {
 		this.twoMonthAgoInterest = twoMonthAgoInterest;
 	}
-	public Long getThreeMonthAgoInterest() {
+	public String getThreeMonthAgoInterest() {
 		return threeMonthAgoInterest;
 	}
-	public void setThreeMonthAgoInterest(Long threeMonthAgoInterest) {
+	public void setThreeMonthAgoInterest(String threeMonthAgoInterest) {
 		this.threeMonthAgoInterest = threeMonthAgoInterest;
 	}
-	public Long getFourMonthAgoInterest() {
+	public String getFourMonthAgoInterest() {
 		return fourMonthAgoInterest;
 	}
-	public void setFourMonthAgoInterest(Long fourMonthAgoInterest) {
+	public void setFourMonthAgoInterest(String fourMonthAgoInterest) {
 		this.fourMonthAgoInterest = fourMonthAgoInterest;
 	}
-	public Long getFiveMonthAgoInterest() {
+	public String getFiveMonthAgoInterest() {
 		return fiveMonthAgoInterest;
 	}
-	public void setFiveMonthAgoInterest(Long fiveMonthAgoInterest) {
+	public void setFiveMonthAgoInterest(String fiveMonthAgoInterest) {
 		this.fiveMonthAgoInterest = fiveMonthAgoInterest;
 	}
-	public Long getSixMonthAgoInterest() {
+	public String getSixMonthAgoInterest() {
 		return sixMonthAgoInterest;
 	}
-	public void setSixMonthAgoInterest(Long sixMonthAgoInterest) {
+	public void setSixMonthAgoInterest(String sixMonthAgoInterest) {
 		this.sixMonthAgoInterest = sixMonthAgoInterest;
 	}
-	public Long getSevenMonthAgoInterest() {
+	public String getSevenMonthAgoInterest() {
 		return sevenMonthAgoInterest;
 	}
-	public void setSevenMonthAgoInterest(Long sevenMonthAgoInterest) {
+	public void setSevenMonthAgoInterest(String sevenMonthAgoInterest) {
 		this.sevenMonthAgoInterest = sevenMonthAgoInterest;
 	}
-	public Long getEightMonthAgoInterest() {
+	public String getEightMonthAgoInterest() {
 		return eightMonthAgoInterest;
 	}
-	public void setEightMonthAgoInterest(Long eightMonthAgoInterest) {
+	public void setEightMonthAgoInterest(String eightMonthAgoInterest) {
 		this.eightMonthAgoInterest = eightMonthAgoInterest;
 	}
-	public Long getNineMonthAgoInterest() {
+	public String getNineMonthAgoInterest() {
 		return nineMonthAgoInterest;
 	}
-	public void setNineMonthAgoInterest(Long nineMonthAgoInterest) {
+	public void setNineMonthAgoInterest(String nineMonthAgoInterest) {
 		this.nineMonthAgoInterest = nineMonthAgoInterest;
 	}
-	public Long getTenMonthAgoInterest() {
+	public String getTenMonthAgoInterest() {
 		return tenMonthAgoInterest;
 	}
-	public void setTenMonthAgoInterest(Long tenMonthAgoInterest) {
+	public void setTenMonthAgoInterest(String tenMonthAgoInterest) {
 		this.tenMonthAgoInterest = tenMonthAgoInterest;
 	}
-	public Long getElevenMonthAgoInterest() {
+	public String getElevenMonthAgoInterest() {
 		return elevenMonthAgoInterest;
 	}
-	public void setElevenMonthAgoInterest(Long elevenMonthAgoInterest) {
+	public void setElevenMonthAgoInterest(String elevenMonthAgoInterest) {
 		this.elevenMonthAgoInterest = elevenMonthAgoInterest;
 	}
 }

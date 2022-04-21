@@ -13,7 +13,6 @@ import auth.service.User;
 import bankbook.model.AccountInfo;
 import bankbook.service.AccountInfoService;
 import monthlyinterest.model.MonthlyInterest;
-import monthlyinterest.model.MonthlyInterestString;
 import monthlyinterest.service.MonthlyInterestService;
 import mvc.command.CommandHandler;
 import sql.exception.SelectQueryNoResultException;
@@ -53,24 +52,10 @@ public class MonthlyInterestHandler implements CommandHandler{
 			AccountInfo accountInfo = accountInfoService.searchAccountInfo(id);
 			req.setAttribute("accountInfo", AccountNumberDashFormat.format(accountInfo.getAccountNumber()));
 			
-			MonthlyInterest monthlyInterest = monthlyInterestService.searchMonthlyInterest(accountInfo.getBankCode(), accountInfo.getAccountNumber());
+			MonthlyInterest monthlyInterest 
+							= monthlyInterestService.searchMonthlyInterest(accountInfo.getBankCode(), accountInfo.getAccountNumber());
 			
-			MonthlyInterestString monthlyInterestFormat 
-									= new MonthlyInterestString(monthlyInterest.getBankCode(),
-																monthlyInterest.getAccountNumber(),
-																MoneyCommaFormat.format(monthlyInterest.getThisMonthInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getOneMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getTwoMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getThreeMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getFourMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getFiveMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getSixMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getSevenMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getEightMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getNineMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getTenMonthAgoInterest()),
-																MoneyCommaFormat.format(monthlyInterest.getElevenMonthAgoInterest()));
-			req.setAttribute("monthlyInterest", monthlyInterestFormat);
+			req.setAttribute("monthlyInterest", monthlyInterest);
 			
 			setMonthlyFormat(req);
 			

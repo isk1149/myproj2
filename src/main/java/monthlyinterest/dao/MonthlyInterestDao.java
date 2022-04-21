@@ -7,11 +7,10 @@ import java.sql.SQLException;
 
 import jdbc.JdbcUtil;
 import monthlyinterest.model.MonthlyInterest;
+import util.MoneyCommaFormat;
 
 public class MonthlyInterestDao {
 
-	//private MonthlyInterest monthlyInterest = new MonthlyInterest();
-	
 	public MonthlyInterest searchMonthlyInterest(Connection conn, String bankCode, String accountNumber) throws SQLException {
 		
 		PreparedStatement pstmt = null;
@@ -42,19 +41,19 @@ public class MonthlyInterestDao {
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
 				monthlyInterest = new MonthlyInterest(rs.getString("bankcode"),
-													  rs.getString("accountnumber"),
-													  rs.getLong("thismonth"),
-													  rs.getLong("onemonthago"),
-													  rs.getLong("twomonthago"),
-													  rs.getLong("threemonthago"),
-													  rs.getLong("fourmonthago"),
-													  rs.getLong("fivemonthago"),
-													  rs.getLong("sixmonthago"),
-													  rs.getLong("sevenmonthago"),
-													  rs.getLong("eightmonthago"),
-													  rs.getLong("ninemonthago"),
-													  rs.getLong("tenmonthago"),
-													  rs.getLong("elevenmonthago")
+														    rs.getString("accountnumber"),
+														    MoneyCommaFormat.format(rs.getLong("thismonth")),
+														    MoneyCommaFormat.format(rs.getLong("onemonthago")),
+														    MoneyCommaFormat.format(rs.getLong("twomonthago")),
+														    MoneyCommaFormat.format(rs.getLong("threemonthago")),
+														    MoneyCommaFormat.format(rs.getLong("fourmonthago")),
+														    MoneyCommaFormat.format(rs.getLong("fivemonthago")),
+														    MoneyCommaFormat.format(rs.getLong("sixmonthago")),
+														    MoneyCommaFormat.format(rs.getLong("sevenmonthago")),
+														    MoneyCommaFormat.format(rs.getLong("eightmonthago")),
+														    MoneyCommaFormat.format(rs.getLong("ninemonthago")),
+														    MoneyCommaFormat.format(rs.getLong("tenmonthago")),
+														    MoneyCommaFormat.format(rs.getLong("elevenmonthago"))
 													  );
 			}
 			return monthlyInterest;
