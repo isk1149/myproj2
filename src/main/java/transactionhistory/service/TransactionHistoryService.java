@@ -25,7 +25,7 @@ public class TransactionHistoryService {
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		} catch (SelectQueryNoResultException e) {
-			throw new RuntimeException(e);
+			throw e;
 		}
 	}
 }
