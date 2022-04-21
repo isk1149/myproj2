@@ -63,4 +63,24 @@ public class TransactionHistoryDao {
 		}
 	}
 	
+	public int insertDataToTransactionHistory(Connection conn, String myBankcode, String myAccountnumber, String date, 
+			   									String transactionBankCode, String transactionAccountNumber, long interest, String inOut) 
+		throws SQLException {
+		
+		PreparedStatement pstmt = null;
+		try {
+			pstmt = conn.prepareStatement("insert into transactionhistory " + 
+				 "values(?, ?, to_date(?, 'YYYYMMDDHH24MISS'), ?, ?, ?, ?) ");
+			pstmt.setString(1, myBankcode);
+			pstmt.setString(2, myAccountnumber);
+			pstmt.setString(3, date);
+			pstmt.setString(4, transactionBankCode);
+			pstmt.setString(5, transactionAccountNumber);
+			pstmt.setLong(6, interest);
+			pstmt.setString(7, inOut);
+			return pstmt.executeUpdate();
+		} finally {
+			JdbcUtil.close(pstmt);
+		}
+	}
 }

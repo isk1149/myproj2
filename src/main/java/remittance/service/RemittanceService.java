@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 
 import bankbook.dao.BankbookDao;
-import bankbook.dao.TransactionHistoryDao;
+import transactionhistory.dao.TransactionHistoryDao;
 import jdbc.JdbcUtil;
 import jdbc.connection.ConnectionProvider;
 import sql.exception.UpdateQueryNotApplyException;
